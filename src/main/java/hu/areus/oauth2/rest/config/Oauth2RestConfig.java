@@ -1,4 +1,4 @@
-package hu.areus.oauth2.rest;
+package hu.areus.oauth2.rest.config;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -20,7 +20,7 @@ import org.springframework.security.oauth2.client.userinfo.OAuth2UserService;
 import org.springframework.security.oauth2.core.user.OAuth2User;
 
 @Configuration
-public class Oauth2RestDemoNewConfig 
+public class Oauth2RestConfig
 {
 
 	/**

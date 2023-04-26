@@ -1,4 +1,4 @@
-package hu.areus.oauth2.rest;
+package hu.areus.oauth2.rest.auth;
 
 import java.util.Collection;
 
