@@ -1,25 +1,21 @@
 server:
-  port: 8081
+  port: ${SERVER_PORT:8081}
 spring:
   security:
     oauth2:
       client:
         provider:
           openam:
-            #            Authorization URI of auth server
-            authorization-uri: http://localhost:8080/realms/testrealm/protocol/openid-connect/auth
-            #            Get Access token URI
-            token-uri: http://localhost:8080/realms/testrealm/protocol/openid-connect/token
-            #            URI to get user-info -> scopes, roles, attributes
-            user-info-uri: http://localhost:8080/realms/testrealm/protocol/openid-connect/userinfo
-            #            auth name is parsed from this attribute
-            user-name-attribute: preferred_username
+            authorization-uri: ${AUTHORIZATION_URI}
+            token-uri: ${TOKEN_URI}
+            user-info-uri: ${USER_INFO_URI}
+            user-name-attribute: ${USER_NAME_ATTRIBUTE:preferred_username}
         registration:
           openam:
-            client-id: testclient
-            client-secret: w6Nia5BQvEH3OVcI5aMqfcjI1xzvdcqD
-            scope: openid
-            authorization-grant-type: password
+            client-id: ${CLIENT_ID}
+            client-secret: ${CLIENT_SECRET}
+            scope: ${SCOPE:openid}
+            authorization-grant-type: ${AUTHORIZATION_GRANT_TYPE:password}
 logging:
   level:
     org:
